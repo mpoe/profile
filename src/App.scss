@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+button {
+    all: unset;
+
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+}
+
+.profile {
+
+    &__header,
+    &__body,
+    &__footer {
+        padding: 20px
+    }
+
+    &__header,
+    &__body {
+        border-bottom: 1px solid grey;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        * {
+            margin: 0;
+        }
+
+        &__image {
+            margin-right: 20px;
+            width: 77px;
+            height: 77px;
+            border-radius: 50%;
+            border: 1px solid lightgray;
+            background-color: lightblue;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+
+            &__img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &__input {
+                display: none;
+            }
+
+            &__hover {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background-color: rgba(199, 199, 199, 0.8);
+                border-radius: 50%;
+            }
+
+            &__fallback {
+                fill: #4b4e53;
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+
+    &__body {
+        &__header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__button {
+            color: lightskyblue;
+            height: 16px;
+            line-height: 16px;
+        }
+
+        &__form {
+            max-width: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @media (max-width: 900px) {
+                max-width: 60%;
+            }
+
+            @media (max-width: 650px) {
+                max-width: 70%;
+            }
+
+            @media (max-width: 550px) {
+                grid-template-columns: 1fr;
+            }
+
+            &__content {
+                margin-bottom: 10px;
+
+                & input {
+                    outline: none;
+                }
+
+                &__input {
+                    &__error {
+                        color: red;
+                    }
+                }
+            }
+
+            & p {
+                margin: 0;
+            }
+
+            & button {
+                background-color: blue;
+                color: white;
+                width: fit-content;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    &__interests {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__dialog {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 30px;
+
+        &--show {
+            display: flex;
+        }
+
+        & p {
+            margin: 0;
+            color: #4b4e53;
+        }
+
+        &__warning {
+            width: 26px;
+            height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            border-radius: 50%;
+
+            &>svg {
+                width: 20px;
+                height: 17px;
+                fill: white;
+            }
+        }
+
+        &__actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            & button {
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+            &__primary {
+                background-color: blue;
+                color: white;
+            }
+
+            &__secondary {
+                border: 1px solid #4b4e53;
+                color: #4b4e53;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "firstName": "Angus",
+    "lastName": "Ward",
+    "email": "angus-ward862@hessel-greenfelder.dk",
+    "phoneNumber": "+4510203040",
+    "profileImage": null,
+    "birthday": "1990-10-09",
+    "interests": [
+        "Soccer",
+        "Beer brewing",
+        "Bicycling",
+        "Wine"
+    ]
+}

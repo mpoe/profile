@@ -1,0 +1,42 @@
+.interest {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    line-height: 16px;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(214, 79, 79);
+        border-color: rgb(214, 79, 79);
+    }
+
+    &--creating {
+        input {
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            border-color: black;
+        }
+    }
+
+    &--new {
+        background-color: blue;
+        color: white;
+        border: none;
+        font-size: 12px;
+        margin-left: 10px;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
